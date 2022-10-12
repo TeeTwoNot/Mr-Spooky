@@ -57,6 +57,12 @@ class Fun(commands.Cog):
         await interaction.response.send_message(random.choice(lists.spookyjoke))
 
     
+    #DOOT COMMAND
+    @app_commands.command(name="doot", description="Doot!")
+    async def doot(self, interaction: discord.Interaction):
+        await interaction.response.send_message('https://tenor.com/view/skeleton-trumpet-gif-4622525')
+
+    
     #SPOOKYSTORY COMMAND
     @app_commands.command(name="spookystory", description="Very spooky!")
     @app_commands.choices(story = [
