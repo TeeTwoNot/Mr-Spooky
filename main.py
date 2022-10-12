@@ -1,3 +1,12 @@
+"""
+BOO! Get spooked judges!
+I've been coding for about a year in total (probably closer to 2 years including huuuge breaks) and my code might be all over the place in certain places.
+Also, HAPPY HALLOWEEN! 
+We don't celebrate Halloween here but I had to challenge myself with my first ever hackathon regardless of theme, and this was perfect timing!
+Anyways, I hope you enjoy using this Amazing Bot™ and it's Advanced Features™ and Highly Optimized Performance™, even though it's Python (only big brain programmers will understand)
+CYA!
+"""
+
 #IMPORTS
 import os
 import discord
@@ -67,6 +76,8 @@ class Bot(commands.Bot):
 #DEFINE BOT
 bot = Bot()
 
+#V COG COMMANDS WON'T WORK WITHOUT MESSAGE CONTENT (NOT NEEDED EITHER WAY) V
+
 #LOAD COG COMMAND
 @bot.command(hidden=True)
 @commands.is_owner()
@@ -114,6 +125,8 @@ async def status_task():
         await bot.change_presence(activity=discord.Game(name="I'm Mr. Spooky!"))
         await asyncio.sleep(120)
         await bot.change_presence(activity=discord.Game(name="Made in Greece! (even though we don't have Halloween here)"))
+        await asyncio.sleep(120)
+        await bot.change_presence(activity=discord.Game(name="OoOoOoo I'm a spooky ghost!"))
         await asyncio.sleep(120)
 
 
