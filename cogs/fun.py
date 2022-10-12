@@ -1,14 +1,16 @@
+#IMPORTS
 import discord
 import random
 import aiohttp
 import asyncio
 
+#FROM DISCORD
 from discord import app_commands, ui
 from discord.ext import commands
-
-from components import lists
-
 from discord.app_commands import Choice
+
+#FROM OTHER
+from components import lists
 
 
 #COG CLASS
@@ -41,7 +43,7 @@ class Fun(commands.Cog):
                 await interaction.response.send_message(embed=embed)
 
 
-    #SAY COMMAND
+    #SPOOKIFY COMMAND
     @app_commands.command(name="spookify", description="Spookifies your text!")
     async def spookify(self, interaction: discord.Interaction, msg: str):
         spook = " 🎃 "
