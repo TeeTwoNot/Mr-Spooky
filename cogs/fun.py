@@ -32,14 +32,16 @@ class Fun(commands.Cog):
                 image_url = random_post["data"]["url"]
                 title = random_post["data"]["title"]
                 subreddit_title = random_post["data"]["subreddit"]
+                post_link = random_post["data"]["permalink"]
+
 
                 embed = discord.Embed(
                     title=f"{title}",
-                    description="", 
+                    description=f"[Link](https://reddit.com{post_link})", 
                     color=0xEB6123
                 )
                 embed.set_image(url=image_url)
-                embed.set_footer(text=f"By r/{subreddit_title}")
+                embed.set_footer(text=f"By r/{subreddit_title}") 
                 await interaction.response.send_message(embed=embed)
 
 
