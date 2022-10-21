@@ -53,6 +53,14 @@ class Fun(commands.Cog):
         await interaction.response.send_message("🎃 " + msg + " 🎃")
 
 
+    #GHOSTIFY COMMAND
+    @app_commands.command(name="ghostify", description="Spookifies your text!")
+    async def ghostify(self, interaction: discord.Interaction, msg: str):
+        ghost = " 👻 "
+        msg = msg.replace(" ", spook)
+        await interaction.response.send_message("👻 " + msg + " 👻")
+
+
     #SPOOKYJOKE COMMAND
     @app_commands.command(name="spookyjoke", description="Very spooky!")
     async def spookyjoke(self, interaction: discord.Interaction):
