@@ -7,7 +7,7 @@ import asyncio
 #FROM DISCORD
 from discord import app_commands, ui
 from discord.ext import commands
-from discord.app_commands import Choice
+from discord.app_commands import Choice, AppCommandError
 
 #FROM OTHER
 from components import lists
@@ -45,6 +45,12 @@ class Fun(commands.Cog):
                 await interaction.response.send_message(embed=embed)
 
 
+    @halloween.error
+    async def clear_error(self, interaction: discord.Interaction, error: AppCommandError):
+        if isinstance(error, app_commands.CommandInvokeError):
+                await interaction.response.send_message("Something went wrong when fetching spooky memes! Try running the command again!", ephemeral=True)
+
+
     #SPOOKIFY COMMAND
     @app_commands.command(name="spookify", description="Spookifies your text!")
     async def spookify(self, interaction: discord.Interaction, msg: str):
@@ -57,7 +63,7 @@ class Fun(commands.Cog):
     @app_commands.command(name="ghostify", description="Spookifies your text!")
     async def ghostify(self, interaction: discord.Interaction, msg: str):
         ghost = " 👻 "
-        msg = msg.replace(" ", spook)
+        msg = msg.replace(" ", ghost)
         await interaction.response.send_message("👻 " + msg + " 👻")
 
 
