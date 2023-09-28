@@ -29,6 +29,7 @@ class Bot(commands.Bot):
     async def on_ready(self):
         print("-------------------")
         print('Mr. Spooky is online!')
+        print(f"Servers: {len(self.guilds)}")
         print('Ping: {0}ms'.format(round(bot.latency, 3)))
         print(f"API: {discord.__version__}")
         print(f"Python: {platform.python_version()}")
