@@ -108,8 +108,6 @@ async def status_task():
         await asyncio.sleep(120)
         await bot.change_presence(activity=discord.Game(name=f"in {len(bot.guilds)} servers!"))
         await asyncio.sleep(120)
-        await bot.change_presence(activity=discord.Game(name="OoOoOoo I'm a spooky ghost!"))
-        await asyncio.sleep(120)
 
 
 bot.run(TOKEN)
