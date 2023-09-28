@@ -9,22 +9,15 @@ import platform
 #FROM DISCORD
 from discord.ext import commands
 
-
-#FROM OTHERS
-from dotenv import load_dotenv
-
-
 #INTENTS
 intents = discord.Intents.default()
-
 
 #DON'T GENERATE __PYCACHE__
 sys.dont_write_bytecode = True
 
 
 #DOTENV
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = os.environ['DISCORD_TOKEN']
 
 
 #BOT CLASS
