@@ -1,3 +1,3 @@
 # Mr. Spooky - The spookiest bot around!
-## Detailed README.md coming soon! 
+Detailed README.md coming soon! 
 
