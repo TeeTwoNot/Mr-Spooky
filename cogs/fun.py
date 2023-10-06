@@ -35,7 +35,7 @@ class Fun(commands.Cog):
                 title = random_post["data"]["title"]
                 subreddit_title = random_post["data"]["subreddit"]
 
-                embed = discord.Embed(title=f"{title}", description="", color=0xb40000)
+                embed = discord.Embed(title=f"{title}", description="", color=0xeb6123)
                 embed.set_image(url=image_url)
                 embed.set_footer(text=f"By r/{subreddit_title}")
                 await interaction.response.send_message(embed=embed)
