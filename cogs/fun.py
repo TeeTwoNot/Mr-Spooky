@@ -112,13 +112,13 @@ class SpookyStory1(ui.Modal, title="Spooky Story Generator!"):
 
     async def on_submit(self, interaction: discord.Interaction):
         await interaction.response.send_message(
-            f"# Once upon a time...\n\n\
+f"# Once upon a time...\n\
     There was __{self.name}__, chilling on the couch, watching spooky memes on the phone, and sipping on __{self.drink}__.\n\
     And, since it's spooky month, and it's the best month of the year (obviously), __{self.name}__ decided to do something different this time around.\n\
     So, __{self.name}__ decided to ***kidnap a stranger*** and ***tie him on a chair*** in the basement. Perfectly normal for spooky month.\n\
     __{self.name}__ then played __{self.music}__ on max volume and left.\n\
     The stranger felt __{self.emotion}__ while being tortured by the loud music.\n\
-    Then the stranger got spooked by a spooky ghost and died.\n\n\
+    Then the stranger got spooked by a spooky ghost and died.\n\
 ## THE END."
         )
 
@@ -133,7 +133,7 @@ class SpookyStory2(ui.Modal, title="Spooky Story Generator!"):
 
     async def on_submit(self, interaction: discord.Interaction):
         await interaction.response.send_message(
-            f"# Once upon a time...\n\n\
+f"# Once upon a time...\n\
     There was __{self.name}__ and their huge mansion! The mansion had all sorts of rooms... A theater, a bar, and a lot of jacuzzis!\n\
     One day, while __{self.name}__ was relaxing in jacuzzi #__{self.number}__, a spooky ghost suddenly appeared in front of them!\n\
     __{self.name}__ and the ghost stared at eachother very awkwardly, until the ghost started speaking in its deep, scary voice:\n\
@@ -143,7 +143,7 @@ class SpookyStory2(ui.Modal, title="Spooky Story Generator!"):
     'What?', __{self.name}__ responded.\n\
     The ghost then started __{self.verb}__.\n\
     __{self.name}__ felt __{self.emotion}__ with what the ghost had to say.\n\
-    Then __{self.name}__ got jumpscared by their spooky pet spider and died.\n\n\
+    Then __{self.name}__ got jumpscared by their spooky pet spider and died.\n\
 ## THE END."
             )
 
@@ -158,7 +158,7 @@ class SpookyStory3(ui.Modal, title="Spooky Story Generator!"):
 
     async def on_submit(self, interaction: discord.Interaction):
         await interaction.response.send_message(
-            f"# Once upon a time...\n\n\
+f"# Once upon a time...\n\
     There were two friends chillin' in their very expensive jacuzzi. (these stories have way too many for whatever reason)\n\
     They were chatting about how spooktober is arriving soon, and what they should do.\n\
     Suddenly, they heard their phones go off...they were both __{self.feeling}__. After a short pause, they both said to each other with excitement in their eyes...\n\
@@ -172,7 +172,7 @@ class SpookyStory3(ui.Modal, title="Spooky Story Generator!"):
     They knocked on the door and the door opened slowly...\n\
     'TRICK OR TREAT?', the friends shouted.\n\
     Then the __{self.neighbour}__ got a heart attack and almost died but the ambulance arrived in time.\n\
-    (you really thought someone was going to die again, shame on you)\n\n\
+    (you really thought someone was going to die again, shame on you)\n\
 ## THE END."
             )
 
