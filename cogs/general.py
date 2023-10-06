@@ -19,7 +19,7 @@ class General(commands.Cog):
     @app_commands.command(name="support", description="Get support about the bot!")
     async def support(self, interaction: discord.Interaction):
         embed = discord.Embed(title="Something went wrong?", description="No worries!", color=0xeb6123)
-        embed.add_field(name="Get support:", value="[Timeless28 Discord Server]((https://discord.gg/ZmjXmfvxHU))")
+        embed.add_field(name="Get support:", value="[Timeless28 Discord Server](https://discord.gg/ZmjXmfvxHU)")
         await interaction.response.send_message(embed=embed)
 
     #SERVERS COMMAND
