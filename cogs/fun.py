@@ -181,7 +181,7 @@ class SpookyStory4(ui.Modal, title="Spooky Story Generator!"):
     variable = ui.TextInput(label="Costume 1", style=discord.TextStyle.short, placeholder="Name a costume! (e.g. 'a ghost costume')", required=True)
 
     async def on_submit(self, interaction: discord.Interaction):
-        await interaction.response.send_message("COMING SOON")
+        await interaction.response.send_message("COMING SOON!")
            
 
 class SpookyStory5(ui.Modal, title="Spooky Story Generator!"):
