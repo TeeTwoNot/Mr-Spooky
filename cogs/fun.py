@@ -164,8 +164,8 @@ class SpookyStory3(ui.Modal, title="Spooky Story Generator!"):
     Suddenly, they heard their phones go off...they were both __{self.feeling}__. After a short pause, they both said to each other with excitement in their eyes...\n\
     '**IT'S SPOOKTOBER!!!**'\n\
     So they got out of the jacuzzi and quickly went inside to change to their spooky costumes!\n\
-    The first outfit was __{self.outfit1}__! Very spooky.\n\
-    The second outfit was __{self.outfit2}__! Even spookier!\n\
+    The first one was a __{self.outfit1}__ costume! Very spooky.\n\
+    The second one was a __{self.outfit2}__ costume! Even spookier!\n\
     They then got their snack bags and went on their way to Trick or Treat!\n\
     Their favourite treat was __{self.treat}__! That's a really tasty treat!\n\
     The first house they went to was their neighbour __{self.neighbour}__'s house!\n\
