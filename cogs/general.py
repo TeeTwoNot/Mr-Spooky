@@ -24,7 +24,7 @@ class General(commands.Cog):
 
     #SERVERS COMMAND
     @app_commands.command(name="servers", description="See how many servers Mr. Spooky is haunting!")
-    async def support(self, interaction: discord.Interaction):
+    async def servers(self, interaction: discord.Interaction):
         count = len(self.bot.guilds)
         embed = discord.Embed(title="Currently haunting...", description="", color=0xeb6123)
         embed.add_field(name=f"{count} servers!", value="")
