@@ -167,7 +167,7 @@ class SpookyStory3(ui.Modal, title="Spooky Story Generator!"):
     The first one was a __{self.outfit1}__ costume! Very spooky.\n\
     The second one was a __{self.outfit2}__ costume! Even spookier!\n\
     They then got their snack bags and went on their way to Trick or Treat!\n\
-    Their favourite treat was __{self.treat}__! That's a really tasty treat!\n\
+    Their favourite treat was __{self.treat}__! That's really tasty!\n\
     The first house they went to was their neighbour __{self.neighbour}__'s house!\n\
     They knocked on the door and the door opened slowly...\n\
     'TRICK OR TREAT?', the bros shouted.\n\
