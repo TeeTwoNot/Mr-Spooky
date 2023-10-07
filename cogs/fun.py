@@ -12,6 +12,7 @@ from discord.app_commands import Choice, AppCommandError
 
 #FROM OTHER
 from components import lists
+from re import search
 
 
 #COG CLASS
@@ -22,23 +23,33 @@ class Fun(commands.Cog):
 
     #MEME COMMAND
     @app_commands.command(name="meme", description="Spooky memes just for you!")
-    @app_commands.checks.cooldown(1, 5.0)
+    @app_commands.checks.cooldown(1, 10.0)
     async def meme(self, interaction: discord.Interaction) -> None:
+        await interaction.response.defer()
         subreddit = lists.halloweensub
 
         async with aiohttp.ClientSession() as clientsesh:
             async with clientsesh.get(random.choice(subreddit)) as reddit:
                 res = await reddit.json()
 
-                random_post = res["data"]["children"][random.randint(0, 25)]
-                image_url = random_post["data"]["url"]
-                title = random_post["data"]["title"]
-                subreddit_title = random_post["data"]["subreddit"]
+                if reddit.status != 200:
+                    embed = discord.Embed(title="Something went wrong!", description=f"Try again later. (Status Code: {reddit.status})", color=0xeb6123)
+                    await interaction.followup.send(embed=embed)
+                else:
+                    while True:
+                        random_post = res["data"]["children"][random.randint(0, 24)]
+                        image_url = str(random_post["data"]["url"])
+                        if search(".jpg|.jpeg|.png|.gif$", image_url):
+                            break
+                    
+                    permalink = random_post["data"]["permalink"]
+                    title = random_post["data"]["title"]
+                    subreddit_title = random_post["data"]["subreddit"]
 
-                embed = discord.Embed(title=f"{title}", description="", color=0xeb6123)
-                embed.set_image(url=image_url)
-                embed.set_footer(text=f"By r/{subreddit_title}")
-                await interaction.response.send_message(embed=embed)
+                    embed = discord.Embed(title=f"{title}", description="", url=f"https://reddit.com/{permalink}", color=0xeb6123)
+                    embed.set_image(url=image_url)
+                    embed.set_footer(text=f"By r/{subreddit_title}")
+                    await interaction.followup.send(embed=embed)
 
     @meme.error
     async def meme_error(self, interaction: discord.Interaction, error: AppCommandError) -> None:
