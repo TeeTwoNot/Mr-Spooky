@@ -21,7 +21,7 @@ class Fun(commands.Cog):
 
 
     #MEME COMMAND
-    @app_commands.command(name="meme", description="Spooky memes just for you! This command doesn't work sometimes, sorry :(")
+    @app_commands.command(name="meme", description="Spooky memes just for you!")
     @app_commands.checks.cooldown(1, 5.0)
     async def meme(self, interaction: discord.Interaction) -> None:
         subreddit = lists.halloweensub
@@ -54,7 +54,7 @@ class Fun(commands.Cog):
 
 
     #SPOOKIFY COMMAND
-    @app_commands.command(name="spookify", description="Spookifies your text!")
+    @app_commands.command(name="spookify", description="Spook-ifies your text!")
     async def spookify(self, interaction: discord.Interaction, msg: str):
         spook = " 🎃 "
         msg = msg.replace(" ", spook)
@@ -62,7 +62,7 @@ class Fun(commands.Cog):
 
 
     #GHOSTIFY COMMAND
-    @app_commands.command(name="ghostify", description="Spookifies your text!")
+    @app_commands.command(name="ghostify", description="Ghost-ifies your text!")
     async def ghostify(self, interaction: discord.Interaction, msg: str):
         ghost = " 👻 "
         msg = msg.replace(" ", ghost)
@@ -70,19 +70,19 @@ class Fun(commands.Cog):
 
 
     #SPOOKYJOKE COMMAND
-    @app_commands.command(name="spookyjoke", description="Very spooky!")
+    @app_commands.command(name="spookyjoke", description="Tells you a spooky joke!")
     async def spookyjoke(self, interaction: discord.Interaction):
         await interaction.response.send_message(random.choice(lists.spookyjoke))
 
     
     #DOOT COMMAND
-    @app_commands.command(name="doot", description="Doot!")
+    @app_commands.command(name="doot", description="A skeleton dooting a trumpet. Because why not?")
     async def doot(self, interaction: discord.Interaction):
         await interaction.response.send_message('https://tenor.com/view/skeleton-trumpet-gif-4622525')
 
     
     #SPOOKYSTORY COMMAND
-    @app_commands.command(name="spookystory", description="Very spooky!")
+    @app_commands.command(name="spookystory", description="Give random words and get a customized spooky story!")
     @app_commands.choices(story = [
         Choice(name = "Story 1 - The Kidnapping", value = "story1"),
         Choice(name = "Story 2 - A Spooky Encounter", value = "story2"),
