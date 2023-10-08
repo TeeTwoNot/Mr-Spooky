@@ -37,12 +37,16 @@ class Fun(commands.Cog):
                     await interaction.followup.send(embed=embed)
                 else:
                     while True:
+                        counter = 0
                         random_post = res["data"]["children"][random.randint(0, 24)]
                         image_url = str(random_post["data"]["url"])
                         if search(".jpg|.jpeg|.png|.gif$", image_url):
                             break
                         else:
-                            image_url = None
+                            counter += 1
+                            if counter == 10:
+                                image_url = None
+                                break
                     
                     permalink = random_post["data"]["permalink"]
                     title = random_post["data"]["title"]
