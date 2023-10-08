@@ -41,6 +41,8 @@ class Fun(commands.Cog):
                         image_url = str(random_post["data"]["url"])
                         if search(".jpg|.jpeg|.png|.gif$", image_url):
                             break
+                        else:
+                            image_url = None
                     
                     permalink = random_post["data"]["permalink"]
                     title = random_post["data"]["title"]
