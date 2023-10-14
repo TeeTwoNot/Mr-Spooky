@@ -104,7 +104,7 @@ class Fun(commands.Cog):
         Choice(name = "Story 1 - The Kidnapping", value = "story1"),
         Choice(name = "Story 2 - A Spooky Encounter", value = "story2"),
         Choice(name = "Story 3 - Trick or Treat", value = "story3"),
-        Choice(name = "Story 4 - COMING SOON", value = "story4"),
+        Choice(name = "Story 4 - Spooky Decor!", value = "story4"),
         Choice(name = "Story 4 - COMING SOON", value = "story5")
     ])
     async def spookystory(self, interaction: discord.Interaction, story: str):
@@ -195,10 +195,28 @@ f"# Once upon a time...\n\
 
 class SpookyStory4(ui.Modal, title="Spooky Story Generator!"):
 
-    variable = ui.TextInput(label="Costume 1", style=discord.TextStyle.short, placeholder="Name a costume! (e.g. 'a ghost costume')", required=True)
+    decor = ui.TextInput(label="Decoration", style=discord.TextStyle.short, placeholder="Name a scary decoration! (e.g. skeleton, spider, pumpkin)", required=True)
+    entity = ui.TextInput(label="Decoration", style=discord.TextStyle.short, placeholder="Name an entity! (e.g. spirit, ghost)", required=True)
+    action = ui.TextInput(label="Action", style=discord.TextStyle.short, placeholder="Describe an action! (e.g. spooking, making pancakes)", required=True)
+    celeb = ui.TextInput(label="Celebrity", style=discord.TextStyle.short, placeholder="Name a celebrity! (e.g. Will Smith)", required=True)
+    num = ui.TextInput(label="Random Number", style=discord.TextStyle.short, placeholder="Type a random number!", required=True)
 
     async def on_submit(self, interaction: discord.Interaction):
-        await interaction.response.send_message("COMING SOON!")
+        await interaction.response.send_message(
+f"# Once upon a time...\n\
+    There was a plastic __{self.decor}__ decoration on the porch of a house.\n\
+    This was like any other decoration, meant to spice up the porches of houses during spooky season.\n\
+    However, most people that passed by that porch seemed a bit *too* scared of the __{self.decor}__.\n\
+    Something seemed off about that __{self.decor}__, but it had to be just a decoration. Right?\n\
+    It turns out that a __{self.entity}__ had haunted the __{self.decor}__!\n\
+    On Halloween Day, the __{self.entity}__ suddenly woke up and left the porch!\n\
+    Spectators saw the __{self.decor}__ running around and __{self.action}__.\n\
+    *'What?'*, they thought to themselves.\n\
+    Then, out of nowhere, __{self.celeb}__ showed up and started chasing down the __{self.decor}__!\n\
+    After about __{self.bum}__ hours, __{self.celeb}__ caught the __{self.decor}__, saving the neighbourhood.\n\
+    At last, __{self.celeb}__ had saved Halloween for everyone.\n\
+## THE END."
+        )
            
 
 class SpookyStory5(ui.Modal, title="Spooky Story Generator!"):
