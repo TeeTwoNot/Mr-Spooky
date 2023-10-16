@@ -1,2 +1,3 @@
 discord.py==2.3.2
 colorama==0.4.6
+aiohttp-client-cache==0.9.1
