@@ -213,7 +213,7 @@ f"# Once upon a time...\n\
     Spectators saw the __{self.decor}__ running around and __{self.action}__.\n\
     *'What?'*, they thought to themselves.\n\
     Then, out of nowhere, __{self.celeb}__ showed up and started chasing down the __{self.decor}__!\n\
-    After about __{self.bum}__ hours, __{self.celeb}__ caught the __{self.decor}__, saving the neighbourhood.\n\
+    After about __{self.num}__ hours, __{self.celeb}__ caught the __{self.decor}__, saving the neighbourhood.\n\
     At last, __{self.celeb}__ had saved Halloween for everyone.\n\
 ## THE END."
         )
