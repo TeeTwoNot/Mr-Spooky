@@ -167,8 +167,8 @@ f"# Once upon a time...\n\
 
 class SpookyStory3(ui.Modal, title="Spooky Story Generator!"):
 
-    outfit1 = ui.TextInput(label="Costume 1", style=discord.TextStyle.short, placeholder="Name a costume! (e.g. 'a ghost costume')", required=True)
-    outfit2 = ui.TextInput(label="Costume 2", style=discord.TextStyle.short, placeholder="Name a second costume! (e.g. 'a zombie costume')", required=True)
+    outfit1 = ui.TextInput(label="Costume 1", style=discord.TextStyle.short, placeholder="Name a costume! (e.g. ghost, zombie)", required=True)
+    outfit2 = ui.TextInput(label="Costume 2", style=discord.TextStyle.short, placeholder="Name a second costume! (e.g. spider, skeleton)", required=True)
     treat = ui.TextInput(label="Treat", style=discord.TextStyle.short, placeholder="Your favourite treat! (e.g. candy, chocolate)", required=True)
     feeling = ui.TextInput(label="Feeling", style=discord.TextStyle.short, placeholder="Give a feeling! (e.g. shocked, confused)", required=True)
     neighbour = ui.TextInput(label="Neighbour", style=discord.TextStyle.short, placeholder="Name a neighbour! (e.g. grandma, teacher)", required=True)
