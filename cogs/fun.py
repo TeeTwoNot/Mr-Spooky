@@ -99,7 +99,6 @@ class Fun(commands.Cog):
     @app_commands.command(name="howlong", description="How long until Halloween?")
     async def howlong(self, interaction: discord.Interaction):
         unixtime = int(time.time())
-        unixtime = 1698710401
         if unixtime >= 1698710400:
             embed = discord.Embed(title="Halloween is <t:1698710400:R>! (Coordinated Universal Time)", description="It's halloween!!!", color=0xeb6123)
             await interaction.response.send_message(embed=embed)
