@@ -14,8 +14,10 @@ class General(commands.Cog):
     #SUPPORT COMMAND
     @app_commands.command(name="support", description="Get support about the bot!")
     async def support(self, interaction: discord.Interaction):
-        embed = discord.Embed(title="Something went wrong?", description="No worries!", color=0xeb6123)
-        embed.add_field(name="Get support:", value="[Timeless28 Discord Server](https://discord.gg/ZmjXmfvxHU)")
+        embed = discord.Embed(title="Something went wrong?", description="", color=0xeb6123)
+        embed.add_field(name="Support Server", value="[Timeless28](https://discord.gg/ZmjXmfvxHU)", inline=False)
+        embed.add_field(name="GitHub Issues", value="[Mr. Spooky](https://github.com/TeeTwoNot/Mr-Spooky/issues)", inline=False)
+        embed.add_field(name="Email (Not Preferred)", value="info@teetwonot.com", inline=False)
         await interaction.response.send_message(embed=embed)
 
     #SERVERS COMMAND
