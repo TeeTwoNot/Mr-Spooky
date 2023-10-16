@@ -1,9 +1,7 @@
 #IMPORTS
 import discord
 import random
-import aiohttp
 import time
-from components import lists
 
 #FROM DISCORD
 from discord import app_commands, ui
