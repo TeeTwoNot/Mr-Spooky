@@ -21,8 +21,3 @@ spookyjoke = [
 "How do you mend a jack-o'-lantern? With a pumpkin patch.",
 "Where does Dracula keep his money? At the blood bank."
 ]
-
-halloweensub = [
-    'https://www.reddit.com/r/halloween/new.json?sort=hot',
-    'https://www.reddit.com/r/spooktober/new.json?sort=hot'
-]
