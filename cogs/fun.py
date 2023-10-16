@@ -11,9 +11,12 @@ from discord.ext import commands
 from discord.app_commands import Choice, AppCommandError
 
 #FROM OTHER
+from datetime import timedelta
 from components import lists
 from re import search
+from aiohttp_client_cache import CachedSession, CacheBackend
 
+cache = CacheBackend(expire_after=timedelta(seconds=120))
 
 #COG CLASS
 class Fun(commands.Cog):
@@ -26,36 +29,32 @@ class Fun(commands.Cog):
     @app_commands.checks.cooldown(1, 10.0)
     async def meme(self, interaction: discord.Interaction) -> None:
         await interaction.response.defer()
-        subreddit = lists.halloweensub
-
-        async with aiohttp.ClientSession() as clientsesh:
-            async with clientsesh.get(random.choice(subreddit)) as reddit:
+        subreddit = [
+            'https://www.reddit.com/r/halloween/new.json?limit=100',
+            'https://www.reddit.com/r/spooktober/new.json?limit=100'
+        ]
+        async with CachedSession(cache=cache) as session:
+            async with session.get(random.choice(subreddit)) as reddit:
                 res = await reddit.json()
-
-                if reddit.status != 200:
-                    embed = discord.Embed(title="Something went wrong!", description=f"Try again later. (Status Code: {reddit.status})", color=0xeb6123)
-                    await interaction.followup.send(embed=embed)
-                else:
-                    while True:
-                        counter = 0
-                        random_post = res["data"]["children"][random.randint(0, 24)]
-                        image_url = str(random_post["data"]["url"])
-                        if search(".jpg|.jpeg|.png|.gif$", image_url):
+                while True:
+                    counter = 0
+                    random_post = res["data"]["children"][random.randint(0, 99)]
+                    image_url = str(random_post["data"]["url"])
+                    if search(".jpg|.jpeg|.png|.gif$", image_url):
+                        break
+                    else:
+                        counter += 1
+                        if counter == 100:
+                            image_url = None
                             break
-                        else:
-                            counter += 1
-                            if counter == 10:
-                                image_url = None
-                                break
-                    
-                    permalink = random_post["data"]["permalink"]
-                    title = random_post["data"]["title"]
-                    subreddit_title = random_post["data"]["subreddit"]
 
-                    embed = discord.Embed(title=f"{title}", description="", url=f"https://reddit.com{permalink}", color=0xeb6123)
-                    embed.set_image(url=image_url)
-                    embed.set_footer(text=f"By r/{subreddit_title}")
-                    await interaction.followup.send(embed=embed)
+                permalink = random_post["data"]["permalink"]
+                title = random_post["data"]["title"]
+                subreddit_title = random_post["data"]["subreddit"]
+                embed = discord.Embed(title=f"{title}", description="", url=f"https://reddit.com{permalink}", color=0xeb6123)
+                embed.set_image(url=image_url)
+                embed.set_footer(text=f"By r/{subreddit_title}")
+                await interaction.followup.send(embed=embed)
 
     @meme.error
     async def meme_error(self, interaction: discord.Interaction, error: AppCommandError) -> None:
