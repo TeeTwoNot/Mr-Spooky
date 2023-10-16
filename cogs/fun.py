@@ -114,7 +114,7 @@ class Fun(commands.Cog):
         Choice(name = "Story 2 - A Spooky Encounter", value = "story2"),
         Choice(name = "Story 3 - Trick or Treat", value = "story3"),
         Choice(name = "Story 4 - Spooky Decor!", value = "story4"),
-        Choice(name = "Story 4 - COMING SOON", value = "story5")
+        Choice(name = "Story 5 - COMING SOON", value = "story5")
     ])
     async def spookystory(self, interaction: discord.Interaction, story: str):
         if story == "story1":
