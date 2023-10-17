@@ -19,5 +19,13 @@ spookyjoke = [
 "What do you call a cleaning skeleton? The grim sweeper.",
 "What's a witch's favorite school subject? Spelling.",
 "How do you mend a jack-o'-lantern? With a pumpkin patch.",
-"Where does Dracula keep his money? At the blood bank."
+"Where does Dracula keep his money? At the blood bank.",
+"Why did the skeleton run away? Because a dog was after his bones",
+"How did the zombie become great a trick or treating? Dead-ication.",
+"What is a vampire's favorite halloween candy? A sucker.",
+"Why don't skeletons ever go trick or treating? Because they have no-body to go with.",
+"What do ghosts give out to trick or treaters? Booberries!",
+"Who did Frankenstein go trick or treating with? His ghoul friend.",
+"What Halloween candy is never on time for the party? Choco-LATE!",
+"What do witches put on to go trick or treating? Mas-scare-a."
 ]
