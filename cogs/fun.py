@@ -24,7 +24,7 @@ class Fun(commands.Cog):
 
     #MEME COMMAND
     @app_commands.command(name="meme", description="Spooky memes just for you!")
-    @app_commands.checks.cooldown(1, 10.0)
+    @app_commands.checks.cooldown(1, 5.0)
     async def meme(self, interaction: discord.Interaction) -> None:
         await interaction.response.defer()
         subreddit = [
