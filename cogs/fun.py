@@ -146,7 +146,7 @@ f"# Once upon a time...\n\
     The stranger felt __{self.emotion}__ while being tortured by the loud music.\n\
     Then the stranger got spooked by a spooky ghost and died.\n\
 ## THE END."
-        )
+)
 
         
 class SpookyStory2(ui.Modal, title="Spooky Story Generator!"):
@@ -171,7 +171,7 @@ f"# Once upon a time...\n\
     __{self.name}__ felt __{self.emotion}__ with what the ghost had to say.\n\
     Then __{self.name}__ got jumpscared by their spooky pet spider and died.\n\
 ## THE END."
-            )
+)
 
 
 class SpookyStory3(ui.Modal, title="Spooky Story Generator!"):
@@ -200,7 +200,7 @@ f"# Once upon a time...\n\
     Then the __{self.neighbour}__ got a heart attack and almost died but the ambulance arrived in time.\n\
     (you really thought someone was going to die again, shame on you)\n\
 ## THE END."
-            )
+)
 
 class SpookyStory4(ui.Modal, title="Spooky Story Generator!"):
 
@@ -225,7 +225,7 @@ f"# Once upon a time...\n\
     After about __{self.num}__ hours, __{self.celeb}__ caught the __{self.decor}__, saving the neighbourhood.\n\
     At last, __{self.celeb}__ had saved Halloween for everyone.\n\
 ## THE END."
-        )
+)
            
 
 class SpookyStory5(ui.Modal, title="Spooky Story Generator!"):
