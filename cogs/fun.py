@@ -230,14 +230,32 @@ f"# Once upon a time...\n\
 
 class SpookyStory5(ui.Modal, title="Spooky Story Generator!"):
 
-    feeling = ui.TextInput(label="Feeling", style=discord.TextStyle.short, placeholder="Give a feeling! (e.g. sad, confused)", required=True)
+    feeling = ui.TextInput(label="Feeling", style=discord.TextStyle.short, placeholder="Give a feeling! (e.g. determined, motivated)", required=True)
+    num = ui.TextInput(label="Random Number", style=discord.TextStyle.short, placeholder="Type a random number!", required=True)
+    time = ui.TextInput(label="Time", style=discord.TextStyle.short, placeholder="Give a time unit! (e.g. hours, seconds, days)", required=True)
+    say = ui.TextInput(label="Say Something", style=discord.TextStyle.short, placeholder="Something the character wants to say (e.g. I love you)", required=True)
+    feeling2 = ui.TextInput(label="Feeling", style=discord.TextStyle.short, placeholder="Give a feeling! (e.g. scared, confused)", required=True)
 
     async def on_submit(self, interaction: discord.Interaction):
         await interaction.response.send_message(
 f"# Once upon a time...\n\
-    The creator of this bot ran out of ideas for stories.\
-    He felt __{self.feeling}__.
-    (This is a joke, story coming very soon!)
+    TeeTwoNot, the creator of this bot, ran out of ideas for stories.\n\
+    Halloween was approaching and he still hadn't finished the 5th story.\n\
+    He had to do something as soon as possible. That COMING SOON™ placeholder looked really bad!\n\
+    So, he sat down on his desk, opened his computer, and started typing!\n\
+    He felt __{self.feeling}__ while typing away. Look at him go!\n\
+    After an impressive __{self.num}__ __{self.time}__, he finally finished writing the story.\n\
+    As he was about to click the button to publish the story, he heard a knock on his door.\n\
+    *Knock knock.*\n\
+    'Who's there?' he replied.\n\
+    '__{self.say}__', a deep, scary voice said.\n\
+    'I didn't hear that.', TeeTwoNot said.\n\
+    'Wake up.', said the deep, scary voice.\n\
+    TeeTwoNot felt __{self.feeling2}__. 'What's happening?', he thought to himself.\n\
+    He then suddenly woke up.\n\
+    He realized he fell asleep at his desk and dreamed of writing the story.\n\
+    He suddenly heard a deep, scary voice from his headphones say:\n\
+    'Bro still hasn't finished the 5th story. L + Ratio + Maidenless.'\n\
 ## THE END."
 )
 
