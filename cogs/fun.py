@@ -114,7 +114,7 @@ class Fun(commands.Cog):
         Choice(name = "Story 2 - A Spooky Encounter", value = "story2"),
         Choice(name = "Story 3 - Trick or Treat", value = "story3"),
         Choice(name = "Story 4 - Spooky Decor!", value = "story4"),
-        Choice(name = "Story 5 - COMING SOON", value = "story5")
+        Choice(name = "Story 5 - The Creator", value = "story5")
     ])
     async def spookystory(self, interaction: discord.Interaction, story: str):
         if story == "story1":
@@ -230,10 +230,16 @@ f"# Once upon a time...\n\
 
 class SpookyStory5(ui.Modal, title="Spooky Story Generator!"):
 
-    variable = ui.TextInput(label="Costume 1", style=discord.TextStyle.short, placeholder="Name a costume! (e.g. 'a ghost costume')", required=True)
+    feeling = ui.TextInput(label="Feeling", style=discord.TextStyle.short, placeholder="Give a feeling! (e.g. sad, confused)", required=True)
 
     async def on_submit(self, interaction: discord.Interaction):
-        await interaction.response.send_message("COMING SOON!")
+        await interaction.response.send_message(
+f"# Once upon a time...\n\
+    The creator of this bot ran out of ideas for stories.\
+    He felt __{self.feeling}__.
+    (This is a joke, story coming very soon!)
+## THE END."
+)
 
 
 async def setup(bot):
