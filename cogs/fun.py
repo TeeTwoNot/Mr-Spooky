@@ -197,7 +197,7 @@ f"# Once upon a time...\n\
     The first house they went to was their neighbour __{self.neighbour}__'s house!\n\
     They knocked on the door and the door opened slowly...\n\
     'TRICK OR TREAT?', the friends shouted.\n\
-    Then the __{self.neighbour}__ got a heart attack and almost died but the ambulance arrived in time.\n\
+    Then __{self.neighbour}__ got a heart attack and almost died but the ambulance arrived in time.\n\
     (you really thought someone was going to die again, shame on you)\n\
 ## THE END."
 )
